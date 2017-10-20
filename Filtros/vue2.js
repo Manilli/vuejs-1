@@ -25,7 +25,7 @@ const vm=new Vue({
       return this.juegos.filter((juego) => juego.puntuacion >= this.minimo);
     },
     buscarJuego(){
-      return this.juegos.filter((juego) => juego.titulo.includes(this.busqueda));
+      return this.juegos.filter((juego) => juego.titulo.includes(this.busqueda) && juego.puntuacion >= this.minimo);
     }
   }
 });
